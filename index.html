@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Calculator">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="HandheldFriendly" content="true">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+        <title>Calculator</title>
+    </head>
+
+    <body>
+        <main>
+            <div class="cal">
+                <div class="display-container">
+                    <article class="second-display"></article>
+                    <article class="input">0</article>
+                </div>
+                <div class="buttons">
+                    <article class="numbers">
+                        <section class="row">
+                            <button id="1" aria-label="1">1</button>
+                            <button aria-label="2">2</button>
+                            <button aria-label="3">3</button>
+                        </section>
+                        <section class="row">
+                            <button aria-label="4">4</button>
+                            <button aria-label="5">5</button>
+                            <button aria-label="6">6</button>
+                        </section>
+                        <section class="row">
+                            <button aria-label="7">7</button>
+                            <button aria-label="8">8</button>
+                            <button aria-label="9">9</button>
+                        </section>
+                        <section class="row">
+                            <button id="num0" aria-label="0">0</button>
+                            <button aria-label=".">.</button>
+                            
+                        </section>
+                    </article>
+                    <article class="operators">
+                            <button aria-label="divide">/</button>
+                            <button aria-label="multiply">*</button>
+                            <button aria-label="minus">-</button>
+                            <button id="plus" aria-label="plus">+</button>
+                    </article>
+                    <article class="equal">
+                        <button id="clear" aria-label="clear">C</button>
+                        <button id="backspace" aria-label="backspace"><i class="fas fa-caret-left"></i></button>
+                        <button id="result" aria-label="equal">=</button>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- MY WEBSITE -->
+        <div class="me">
+        <a href="https://www.vincentle.me/" aria-label="My Website" rel="noopener" target="_blank">
+        <svg id="myLogo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 440 442.5" style="enable-background:new 0 0 440 442.5;" xml:space="preserve">
+            <style type="text/css">
+                .st100{fill:#000000;}
+                .st101{fill:none;stroke:#000000;stroke-width:25;stroke-miterlimit:10;}
+            </style>
+            <g>
+                <g>
+                    <path class="st100" d="M173.1,411.2c-0.3,0-0.6,0-0.9,0c-4.7-0.4-8.5-4-9.1-8.7L127.5,120l-94.1,78.2c-4.2,3.5-10.6,2.9-14.1-1.3
+                    c-3.5-4.2-2.9-10.6,1.3-14.1L128.8,93c2.8-2.3,6.7-2.9,10.1-1.6c3.4,1.3,5.8,4.4,6.2,8l32.1,254.3l39.4-128.8
+                    c-25.2-28.1-37-56.4-29.7-78.2c6.6-19.9,27.9-33.7,63.5-41c26.1-5.4,59.3-7,91.2-4.4c15.9,1.3,29.8,3.5,40.4,6.5
+                    c10.2,2.8,22.1,7.4,23.7,17.6c0.6,3.9-0.6,8-3.7,12c-12.1,16.1-63.2,44.2-155.1,56.9l-7.8,25.3c18.4,18.4,43.8,37.3,75.1,53.6
+                    c4.9,2.6,6.8,8.6,4.2,13.5c-2.6,4.9-8.6,6.8-13.5,4.2c-28.3-14.8-52.9-32-72.4-49.9l-49.9,163.2
+                    C181.3,408.4,177.4,411.2,173.1,411.2z M311.2,120c-24.1,0-47.1,2.5-65.1,7.1c-15.8,4.1-35.7,11.9-40.3,25.8
+                    c-3.9,11.9,2.5,29.6,17.7,49.2l6.1-19.9c1.1-3.8,4.4-6.5,8.3-7c86-11,131.6-35.4,144.6-46.4c-7.4-2.8-23.2-6.5-49-8.1
+                    C326.1,120.2,318.6,120,311.2,120z"/>
+                </g>
+                <g>
+                    <path class="st100" d="M236.9,374c-1.2,0-2.4-0.2-3.5-0.7L163.3,344c-3.9-1.6-6.2-5.8-5.4-10c0.8-4.2,4.5-7.2,8.7-7.3l72-0.8
+                    l31.1-108.7c1.4-4.8,6.4-7.5,11.1-6.2c4.8,1.4,7.5,6.3,6.2,11.1l-29.6,103.6l131-1.5c0,0,0.1,0,0.1,0c4.9,0,8.9,4,9,8.9
+                    c0.1,5-3.9,9-8.9,9.1l-136.4,1.6l-6.8,23.8c-0.7,2.5-2.4,4.5-4.8,5.6C239.6,373.7,238.2,374,236.9,374z M210.4,344.2l20.6,8.6
+                    l2.5-8.9L210.4,344.2z"/>
+                </g>
+                <circle class="st101" cx="220.6" cy="220.5" r="200"/>
+            </g>
+            </svg>
+        </a>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>

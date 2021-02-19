@@ -1,0 +1,174 @@
+@mixin responsive($device)
+    @if $device == phone
+        @media screen and (max-width: 600px)
+            @content
+    @if $device == tablet-portrait
+        @media screen and (min-width: 601px) and (max-width: 900px)
+            @content
+    @if $device == tablet-landscape
+        @media screen and (min-width: 901px) and (max-width: 1367px)
+            @content
+    @if $device == desktop
+        @media screen and (min-width: 1368px)
+            @content
+
+// Colors
+$main-c: #e9e9e9
+$green: #aacc00
+$red: #cf3131
+
+$shadow: -6px -6px 9px #fff, 6px 6px 9px rgba(#000, 0.4)
+$inset-shadow: inset -6px -6px 9px #fff, inset 6px 6px 9px rgba(#000, 0.4)
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    border: 0
+    text-decoration: none
+    font-family: "Consolas", monospace
+    &:focus
+        outline: none
+        border: none
+
+html, body
+    width: 100%
+    height: 100%
+    background: $main-c
+
+.cal
+    width: 420px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 35px
+    padding: 30px
+    display: flex
+    flex-flow: row wrap
+    box-shadow: $shadow
+
+.display-container
+    width: 100%
+    box-shadow: $inset-shadow
+
+    .input, .second-display
+        width: 100%
+        max-width: 100%
+        height: 100px
+        padding: 10px 10px
+        font-size: 40px
+        text-align: right
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        overflow: hidden
+        text-overflow: clip
+
+    .input
+        font-weight: bold
+
+    .second-display
+        height: 60px
+        font-size: 20px
+
+.buttons
+    width: 100%
+    display: flex
+    flex-flow: row nowrap
+    margin: 10px 0
+
+    button
+        width: 55px
+        height: 55px
+        margin: 10px 6px
+        font-size: 20px
+        border-radius: 15px
+        box-shadow: $shadow
+        cursor: pointer
+        &:hover
+            border-radius: 10px
+            background: linear-gradient(145deg, #c7c6c6, #ffffff)
+            box-shadow: 5px 5px 10px #bfbfbf, -5px -5px 10px #ffffff
+
+    .numbers
+        display: flex
+        flex-flow: row wrap
+        #num0
+            flex: 2
+        .row
+            width: 100%
+            display: flex
+
+    .operators
+        margin: 0 10px 0 10px
+        @extend .numbers
+        & > *
+            color: #8ac926
+            font-size: 25px
+            font-weight: bold
+
+    .equal
+        #clear, #result
+            font-weight: bold
+            background: $green
+            &:hover
+                background: linear-gradient(145deg, $green, #ffffff)
+                box-shadow: 0px 0px 5px $green, 0px 0px 5px #ffffff
+
+        #backspace
+            background: $red
+            &:hover
+                background: linear-gradient(145deg, $red, #ffffff)
+                box-shadow: 0px 0px 5px $red, 0px 0px 5px #ffffff
+            .fa-caret-left
+                font-size: 25px
+                color: white
+        #result
+            height: 44%
+            font-size: 30px
+
+@include responsive(phone)
+    .cal
+        width: 270px
+        padding: 20px
+        border-radius: 20px
+
+    .display-container
+        .input
+            font-size: 30px
+            height: 80px
+        .second-display
+            height: 40px
+
+    .buttons
+        button
+            width: 35px
+            height: 35px
+            border-radius: 8px
+            margin: 8px 4px
+        .numbers
+            font-size: 10px
+        .operators
+            & > *
+                font-size: 20px
+        .equal
+            #backspace
+                .fa-caret-left
+                    font-size: 20px
+    .me
+        #myLogo
+            width: 30px
+            height: 30px
+
+/* MY WEBSITE */
+.me
+    position: absolute
+    top: 2vh
+    right: 2vw
+    z-index: 100
+    cursor: pointer
+
+#myLogo
+    width: 45px
+    height: 45px
