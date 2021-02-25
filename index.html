@@ -3,57 +3,56 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Calculator">
+        <meta name="description" content="Simple Calculator">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="HandheldFriendly" content="true">
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
-        <title>Calculator</title>
+        <title>Simple Calculator</title>
     </head>
 
     <body>
         <main>
-            <div class="cal">
-                <div class="display-container">
-                    <article class="second-display"></article>
-                    <article class="input">0</article>
+            <div id="cal">
+                <div id="screens">
+                    <section id="second-display"></section>
+                    <section id="input-display">0</section>
                 </div>
-                <div class="buttons">
-                    <article class="numbers">
-                        <section class="row">
+                <div id="keypads">
+                    <section class="numbers">
+                        <div class="row">
+                            <button id="num0" aria-label="0">0</button>
+                            <button aria-label=".">.</button>
+                        </div>
+                        <div class="row">
                             <button id="1" aria-label="1">1</button>
                             <button aria-label="2">2</button>
                             <button aria-label="3">3</button>
-                        </section>
-                        <section class="row">
+                        </div>
+                        <div class="row">
                             <button aria-label="4">4</button>
                             <button aria-label="5">5</button>
                             <button aria-label="6">6</button>
-                        </section>
-                        <section class="row">
+                        </div>
+                        <div class="row">
                             <button aria-label="7">7</button>
                             <button aria-label="8">8</button>
                             <button aria-label="9">9</button>
-                        </section>
-                        <section class="row">
-                            <button id="num0" aria-label="0">0</button>
-                            <button aria-label=".">.</button>
-                            
-                        </section>
-                    </article>
-                    <article class="operators">
-                            <button aria-label="divide">/</button>
-                            <button aria-label="multiply">*</button>
-                            <button aria-label="minus">-</button>
-                            <button id="plus" aria-label="plus">+</button>
-                    </article>
-                    <article class="equal">
+                        </div>
+                    </section>
+                    <section class="operators">
+                        <button aria-label="divide">/</button>
+                        <button aria-label="multiply">*</button>
+                        <button aria-label="minus">-</button>
+                        <button id="plus" aria-label="plus">+</button>
+                    </section>
+                    <section class="functions">
                         <button id="clear" aria-label="clear">C</button>
                         <button id="backspace" aria-label="backspace"><i class="fas fa-caret-left"></i></button>
                         <button id="result" aria-label="equal">=</button>
-                    </article>
+                    </section>
                 </div>
             </div>
         </main>

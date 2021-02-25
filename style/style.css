@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 0;
   text-decoration: none;
@@ -19,181 +18,149 @@ html, body {
   background: #e9e9e9;
 }
 
-.cal {
+#cal {
   width: 420px;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 35px;
   padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-shadow: -6px -6px 9px #fff, 6px 6px 9px rgba(0, 0, 0, 0.4);
           box-shadow: -6px -6px 9px #fff, 6px 6px 9px rgba(0, 0, 0, 0.4);
 }
 
-.display-container {
+#screens {
   width: 100%;
-  -webkit-box-shadow: inset -6px -6px 9px #fff, inset 6px 6px 9px rgba(0, 0, 0, 0.4);
           box-shadow: inset -6px -6px 9px #fff, inset 6px 6px 9px rgba(0, 0, 0, 0.4);
 }
 
-.display-container .input, .display-container .second-display {
+#screens #input-display, #screens #second-display {
   width: 100%;
   max-width: 100%;
   height: 100px;
   padding: 10px 10px;
   font-size: 40px;
   text-align: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
   text-overflow: clip;
 }
 
-.display-container .input {
+#screens #input-display {
   font-weight: bold;
 }
 
-.display-container .second-display {
+#screens #second-display {
   height: 60px;
   font-size: 20px;
 }
 
-.buttons {
+#keypads {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   margin: 10px 0;
 }
 
-.buttons button {
+#keypads button {
   width: 55px;
   height: 55px;
   margin: 10px 6px;
   font-size: 20px;
   border-radius: 15px;
-  -webkit-box-shadow: -6px -6px 9px #fff, 6px 6px 9px rgba(0, 0, 0, 0.4);
           box-shadow: -6px -6px 9px #fff, 6px 6px 9px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 
-.buttons button:hover {
+#keypads button:hover {
   border-radius: 10px;
   background: linear-gradient(145deg, #c7c6c6, #ffffff);
-  -webkit-box-shadow: 5px 5px 10px #bfbfbf, -5px -5px 10px #ffffff;
           box-shadow: 5px 5px 10px #bfbfbf, -5px -5px 10px #ffffff;
 }
 
-.buttons .numbers, .buttons .operators {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#keypads .numbers {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+          flex-flow: row wrap-reverse;
 }
 
-.buttons .numbers #num0, .buttons .operators #num0 {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
+#keypads .numbers #num0 {
           flex: 2;
 }
 
-.buttons .numbers .row, .buttons .operators .row {
+#keypads .numbers .row {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
-.buttons .operators {
+#keypads .operators {
   margin: 0 10px 0 10px;
 }
 
-.buttons .operators > * {
+#keypads .operators > * {
   color: #8ac926;
   font-size: 25px;
   font-weight: bold;
 }
 
-.buttons .equal #clear, .buttons .equal #result {
+#keypads .functions #clear, #keypads .functions #result {
   font-weight: bold;
   background: #aacc00;
 }
 
-.buttons .equal #clear:hover, .buttons .equal #result:hover {
+#keypads .functions #clear:hover, #keypads .functions #result:hover {
   background: linear-gradient(145deg, #aacc00, #ffffff);
-  -webkit-box-shadow: 0px 0px 5px #aacc00, 0px 0px 5px #ffffff;
           box-shadow: 0px 0px 5px #aacc00, 0px 0px 5px #ffffff;
 }
 
-.buttons .equal #backspace {
+#keypads .functions #backspace {
   background: #cf3131;
 }
 
-.buttons .equal #backspace:hover {
+#keypads .functions #backspace:hover {
   background: linear-gradient(145deg, #cf3131, #ffffff);
-  -webkit-box-shadow: 0px 0px 5px #cf3131, 0px 0px 5px #ffffff;
           box-shadow: 0px 0px 5px #cf3131, 0px 0px 5px #ffffff;
 }
 
-.buttons .equal #backspace .fa-caret-left {
+#keypads .functions #backspace .fa-caret-left {
   font-size: 25px;
   color: white;
 }
 
-.buttons .equal #result {
+#keypads .functions #result {
   height: 44%;
   font-size: 30px;
 }
 
 @media screen and (max-width: 600px) {
-  .cal {
+  #cal {
     width: 270px;
     padding: 20px;
     border-radius: 20px;
   }
-  .display-container .input {
+  #screens #input-display {
     font-size: 30px;
     height: 80px;
   }
-  .display-container .second-display {
+  #screens #second-display {
     height: 40px;
   }
-  .buttons button {
+  #keypads button {
     width: 35px;
     height: 35px;
     border-radius: 8px;
     margin: 8px 4px;
   }
-  .buttons .numbers, .buttons .operators {
+  #keypads .numbers {
     font-size: 10px;
   }
-  .buttons .operators > * {
+  #keypads .operators > * {
     font-size: 20px;
   }
-  .buttons .equal #backspace .fa-caret-left {
+  #keypads .functions #backspace .fa-caret-left {
     font-size: 20px;
   }
   .me #myLogo {
@@ -215,4 +182,4 @@ html, body {
   width: 45px;
   height: 45px;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=to.css.map */

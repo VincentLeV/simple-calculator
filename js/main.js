@@ -1,5 +1,5 @@
-const inputDisplay = document.querySelector(".input");
-const secondDisplay = document.querySelector(".second-display");
+const inputDisplay = document.getElementById("input-display");
+const secondDisplay = document.getElementById("second-display");
 const numBtn = document.querySelectorAll(".numbers button");
 const operatorBtn = document.querySelectorAll(".operators button");
 const equalBtn = document.getElementById("result");
