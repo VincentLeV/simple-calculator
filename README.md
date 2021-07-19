@@ -13,7 +13,7 @@ This app is built with
 
 ## Screenshot
 
-<img src="resources/calculator.png" alt="Calculator Interface" width="400">
+<img src="resources/calculator-screenshot.png" alt="Calculator Interface" width="400">
 <br>
 
 ## Usage
